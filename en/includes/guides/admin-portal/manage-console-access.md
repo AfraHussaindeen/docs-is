@@ -88,6 +88,7 @@ By default, you can assign each Console component one of the following permissio
 
 
 {% if is_version == "7.1.0" or is_version == "next" or product_name == "WSO2 Identity Platform" %}
+
 #### Granular console permissions
 
 {% if is_version == "7.1.0" %}
