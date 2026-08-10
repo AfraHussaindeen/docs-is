@@ -830,7 +830,6 @@ Follow the steps below to configure a custom console role in {{ product_name }}.
 
 ### Granular console permissions
 
-
 {% if is_version == "7.1.0" %}
 !!! note
     Granular console permissions are available from **update level 7.1.0.73** onwards. See the instructions on [updating WSO2 products](https://updates.docs.wso2.com/en/latest/).
