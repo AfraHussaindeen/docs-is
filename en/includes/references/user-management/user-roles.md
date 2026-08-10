@@ -827,7 +827,9 @@ Follow the steps below to configure a custom console role in {{ product_name }}.
 3. Click **Add** to create the custom role.
 
 {% if is_version == "7.1.0" or is_version == "next" or product_name == "WSO2 Identity Platform" %}
+
 ### Granular console permissions
+
 
 {% if is_version == "7.1.0" %}
 !!! note
@@ -847,6 +849,7 @@ This model is controlled by the `use_granular_console_permissions` setting, whic
 [console_settings]
 use_granular_console_permissions = true
 ```
+
 {% endif %}
 
 You can assign each Console component the following permission levels{% if product_name != "WSO2 Identity Platform" %} instead of **View**/**Edit**{% endif %}: **View**, **Create**, **Update**, and **Delete**.

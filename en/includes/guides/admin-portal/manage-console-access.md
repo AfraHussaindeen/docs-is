@@ -86,6 +86,7 @@ By default, you can assign each Console component one of the following permissio
 
     ![Scopes assigned for a given permission for a Console component]({{base_path}}/assets/img/guides/organization/console/console-role-permissions.png){: width="600" style="display: block; margin: 0; border: 0.3px solid lightgrey;"}
 
+
 {% if is_version == "7.1.0" or is_version == "next" or product_name == "WSO2 Identity Platform" %}
 #### Granular console permissions
 
@@ -98,7 +99,7 @@ By default, Console roles use the combined **View** and **Edit** permission mode
 
 You can optionally enable a more granular permission model that lets you assign **Create**, **Update**, and **Delete** permissions independently for each Console component in both tenant and organization permissions. For example, you can allow a role to create users without allowing it to update or delete existing users.
 
-This model assigns the corresponding granular Console scopes for the selected actions. It is controlled by the `use_granular_console_permissions` setting, which is `false` by default. Enable it only when you need this level of control over Console permissions. To do so, add the following configuration to the `deployment.toml` file and restart the server.
+This model assigns the corresponding granular Console scopes for the selected actions. It's controlled by the `use_granular_console_permissions` setting, which is `false` by default. Enable it only when you need this level of control over Console permissions. To do so, add the following configuration to the `deployment.toml` file and restart the server.
 
 ```toml
 [console_settings]
