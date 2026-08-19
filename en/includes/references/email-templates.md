@@ -7,7 +7,6 @@
     - You can customize all available email templates to match your organization's preferences using the [Email Templates API]({{base_path}}/apis/{{ api_path }}/).
     - You can also use the Console to change some of the most frequently used email templates in {{ product_name }}. Learn how to [customize email content from the Console]({{base_path}}/guides/branding/customize-email-templates/#customize-email-content).
 
-
 ## Email templates in {{ product_name }}
 
 The following is a comprehensive list of email templates that are available in {{ product_name }}.
@@ -162,6 +161,7 @@ Some email templates in {{ product_name }} should contain URLs which users can c
     ```ts
     {{ "{{ account.recovery.endpoint-url }}"}}/confirmregistration.do?confirmation={{ "{{ confirmation-code }}"}}&userstoredomain={{ "{{ userstore-domain }}"}}&username={{ "{{ url:user-name }}" }}
     ```
+
     This URL is used in the <code>EmailConfirm</code> template.
 
 - URL to confirm a user account
@@ -169,6 +169,7 @@ Some email templates in {{ product_name }} should contain URLs which users can c
     ```ts
     {{ "{{ account.recovery.endpoint-url }}"}}/confirmregistration.do?confirmation={{ "{{ confirmation-code }}"}}&userstoredomain={{ "{{ userstore-domain }}"}}&username={{ "{{ url:user-name }}"}}&spId={{ "{{ spId }}" }}
     ```
+
     This URL is used in the <code>AccountConfirmation</code> and <code>ResendAccountConfirmation</code>.
 
 - URL to verify an updated email address.
@@ -176,6 +177,7 @@ Some email templates in {{ product_name }} should contain URLs which users can c
     ```ts
     {{ "{{ account.recovery.endpoint-url }}"}}/confirmregistration.do?confirmation={{ "{{ confirmation-code }}"}}&userstoredomain={{ "{{ userstore-domain }}"}}&amp;username={{ "{{ url:user-name }}" }}
     ```
+
     This URL is used in the <code>VerifyEmailOnUpdate</code> template.
 
 - URL to reset a password
