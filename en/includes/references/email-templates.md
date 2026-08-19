@@ -117,10 +117,24 @@ The following is a comprehensive list of email templates that are available in {
             <td>This email is generated when a user logs in with a magic link. The application name and the expiry time of the link can be accessed by the literals {{"{{ application-name }}"}}, and {{"{{ expiry-time }}"}} respectively.</td>
         </tr>
         <tr>
+            <td>magicLinkSignUp
+            </td>
+            <td>This email is generated when a user signs up and has to verify the account using a magic link.</td>
+        </tr>
+        <tr>
+            <td>magicLinkPasswordRecovery
+            </td>
+            <td>This email is generated when a user initiates a password recovery and has to verify the account using a magic link before resetting the password.</td>
+        </tr>
+        <tr>
             <td>AskPassword<br/><br/>
                 resendAskPassword<br/><br/>
             </td>
             <td>These emails are generated when a user is asked to create a password for the newly created account. </td>
+        </tr>
+        <tr>
+            <td>OrchestratedResendAskPassword</td>
+            <td>This email is generated when the organization administrator reinitiates the request for the user to set up their password, as part of an orchestrated flow.</td>
         </tr>
         <tr>
             <td>selfSignUpNotify<br/><br/>
