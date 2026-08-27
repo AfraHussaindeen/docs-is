@@ -62,7 +62,7 @@ paths:
         "HTTP/1.1 200 OK"
         { "client_id": "s6BhdRkqt3",
         "client_secret":"ZJYCqe3GGRvdrudKyZS0XhGv_Z45DuKhCUk0gBR1vZk",
-        "client_secret_expires_at": 1577858400,
+        "client_secret_expires_at": 2082758400,
         "redirect_uris":["https://client.example.org/callback"],
         "client_name":"application_owner_application_1",
         "grant_types": ["password"]}
@@ -132,7 +132,7 @@ paths:
             "url": "string",
             "ext_param_client_id": "string",
             "ext_param_client_secret": "string",
-            "ext_param_client_secret_expires_at": 1761568483,
+            "ext_param_client_secret_expires_at": 2082758400,
             "contacts": [
               "string"
             ],
@@ -157,7 +157,7 @@ paths:
         "HTTP/1.1 201 Created"
         { "client_id": "s6BhdRkqt3",
         "client_secret":"ZJYCqe3GGRvdrudKyZS0XhGv_Z45DuKhCUk0gBR1vZk",
-        "client_secret_expires_at": 1577858400,
+        "client_secret_expires_at": 2082758400,
         "redirect_uris":[""],
         "grant_types": ["password"],
         "client_name":"application_1" }
@@ -211,7 +211,7 @@ paths:
         "HTTP/1.1 200 OK"
         { "client_id": "s6BhdRkqt3",
         "client_secret":"ZJYCqe3GGRvdrudKyZS0XhGv_Z45DuKhCUk0gBR1vZk",
-        "client_secret_expires_at": 1577858400,
+        "client_secret_expires_at": 2082758400,
         "redirect_uris":["https://client.example.org/callback"],
         "grant_types": ["password"],
         "client_name":"application_owner_application_1" }
@@ -295,7 +295,7 @@ paths:
         "HTTP/1.1 200 OK"
         { "client_id": "s6BhdRkqt3",
         "client_secret":"ZJYCqe3GGRvdrudKyZS0XhGv_Z45DuKhCUk0gBR1vZk",
-        "client_secret_expires_at": 1577858400,
+        "client_secret_expires_at": 2082758400,
         "redirect_uris":["https://client.example.org/callback"],
         "grant_types": ["password"],
         "client_name":"application_owner_application_1" }
@@ -376,7 +376,7 @@ components:
         ext_param_client_secret_expires_at:
           type: integer
           format: int64
-          description: The expiration time of the client secret, expressed in Unix epoch seconds. 0 or omitted for a non-expiring secret.
+          description: The expiration time of the client secret, expressed in Unix epoch seconds. A non-zero value must be a future time. 0 or omitted for a non-expiring secret.
         contacts:
           type: array
           items:

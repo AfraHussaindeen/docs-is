@@ -12,6 +12,7 @@ OpenID Connect protocol related settings are under the **Protocol** section of t
 The following are the minimum configurations that are required for OIDC applications to run successfully.
 
 ### Client credentials
+
 {% set multiple_client_secrets_enabled = (product_name == "WSO2 Identity Platform" and multiple_client_secrets) or (product_name == "WSO2 Identity Server" and is_version > "7.3.0") %}
 
 When your application is registered in {{ product_name }}, a client ID is generated as the identifier of the application. If your application is not a public client, a client secret is generated in addition to the client ID as shown below.
@@ -23,6 +24,7 @@ When your application is registered in {{ product_name }}, a client ID is genera
 {% endif %}
 
 {% if multiple_client_secrets_enabled %}
+
 #### Rotate client secrets gracefully
 
 To prevent application downtime during a secret update, {{ product_name }} allows an application to hold multiple active client secrets at the same time. This enables a seamless migration: you can generate a new secret, update your connecting applications to use it, and delete the old secret once the transition is complete.
@@ -59,7 +61,7 @@ To rotate the client secret of your application,
 
     ![Generate a new client secret]({{base_path}}/assets/img/guides/applications/generate-client-secret.png){: width="600" style="display: block; margin: 0; border: 0.3px solid lightgrey;"}
 
-3. Click **Generate**. The new secret becomes the application's latest active secret. The previous secret remains active and is moved under **View Previous Client Secret**.
+3. Click **Generate**. The new secret becomes the application's latest client secret. The previous secret remains active and is moved under **View Previous Client Secret**.
 
 4. Update your client applications and services to use the newly generated secret. Both secrets remain valid during this rollout.
 

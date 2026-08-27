@@ -929,7 +929,7 @@ paths:
       summary: |
         Regenerate the OAuth2/OIDC client secret.
       description: |
-        This API regenerates the OAuth2/OIDC client secret. <br>
+        This API regenerates a new client secret. Existing secrets and tokens are revoked. <br>
         
         <b>Scope(Permission) required:</b> `internal_org_application_mgt_client_secret_create`
       operationId: regenerateOAuthClientSecret
@@ -1044,7 +1044,7 @@ paths:
             -H 'Content-Type: application/json' \
             -H 'Authorization: Bearer {bearer_token}' \
             -d '{
-              "expiresAt": 1761568483
+              "expiresAt": 2082758400
             }'
     get:
       tags:
@@ -1160,9 +1160,8 @@ paths:
         - Inbound Protocols - OAuth / OIDC
       summary: Delete a specific OAuth2/OIDC client secret.
       description: |
-        This API deletes the client secret identified by `secretId`. The application's most recently
-        added active secret cannot be deleted — at least one active secret must remain per
-        application. <br>
+        This API deletes the client secret identified by `secretId`. The application's latest client
+        secret cannot be deleted — at least one client secret must remain per application. <br>
           <b>Scope(Permission) required:</b> `internal_org_application_mgt_client_secret_delete`
       operationId: deleteOAuthClientSecret
       parameters:
@@ -2120,7 +2119,7 @@ components:
           type: integer
           format: int64
           description: The expiration time of the latest client secret, expressed in Unix epoch seconds. A value of 0 indicates that the secret never expires.
-          example: 1761568483
+          example: 2082758400
         multipleClientSecretsConfigured:
           type: boolean
           readOnly: true
@@ -2281,7 +2280,7 @@ components:
           type: integer
           format: int64
           description: Expiry time as Unix epoch seconds; must be a future time. 0 or omitted for a non-expiring secret.
-          example: 1761568483
+          example: 2082758400
     ClientSecretResponse:
       type: object
       description: Client secret details.
@@ -2303,7 +2302,7 @@ components:
           type: integer
           format: int64
           description: Expiry time as Unix epoch seconds; 0 if the secret never expires.
-          example: 1761568483
+          example: 2082758400
         createdAt:
           type: integer
           format: int64
@@ -2318,7 +2317,7 @@ components:
           example: ACTIVE
         latest:
           type: boolean
-          description: Whether this is the latest (active) secret of the application. The latest secret cannot be deleted.
+          description: Whether this is the latest client secret of the application. The latest client secret cannot be deleted.
           example: true
     ClientSecretList:
       type: object
