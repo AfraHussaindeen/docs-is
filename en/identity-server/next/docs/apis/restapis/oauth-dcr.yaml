@@ -132,6 +132,7 @@ paths:
             "url": "string",
             "ext_param_client_id": "string",
             "ext_param_client_secret": "string",
+            "ext_param_client_secret_expires_at": 1761568483,
             "contacts": [
               "string"
             ],
@@ -372,6 +373,10 @@ components:
           type: string
         ext_param_client_secret:
           type: string
+        ext_param_client_secret_expires_at:
+          type: integer
+          format: int64
+          description: The expiration time of the client secret, expressed in Unix epoch seconds. 0 or omitted for a non-expiring secret.
         contacts:
           type: array
           items:
@@ -533,6 +538,7 @@ components:
         client_secret_expires_at:
           type: integer
           format: int64
+          description: The expiration time of the client secret, expressed in Unix epoch seconds. A value of 0 indicates that the secret never expires.
         redirect_uris:
           type: array
           items:
