@@ -57,13 +57,13 @@ To rotate the client secret of your application,
 2. Select an **Expiration** for the new secret. You can choose one of the preset durations (**30**, **60**, **90**, or **180 days**), enter a custom number of days with **Custom**, or select **Never expires**.
 
     !!! warning
-        Choose carefully. You cannot modify a client secret's expiration time after it is generated.
+        Choose carefully. You cannot change a client secret's expiry time after it's generated.
 
     ![Generate a new client secret]({{base_path}}/assets/img/guides/applications/generate-client-secret.png){: width="600" style="display: block; margin: 0; border: 0.3px solid lightgrey;"}
 
 3. Click **Generate**. The new secret becomes the application's latest client secret. The previous secret remains active and is moved under **View Previous Client Secret**.
 
-4. Update your client applications and services to use the newly generated secret. Both secrets remain valid during this rollout.
+4. Update your client applications and services to use the newly generated secret. Both secrets remain valid during this transition.
 
 5. Once all clients are successfully using the new secret, click **View Previous Client Secret**, click the delete icon next to the old secret, and confirm the action.
 
@@ -74,11 +74,11 @@ To rotate the client secret of your application,
 
         *Note: Deleting a secret only invalidates that specific secret. Active tokens are not revoked, and the application's latest client secret cannot be deleted.*
 
-If an active secret is nearing expiration, a warning banner will appear on the application in the Console to remind you to rotate it before authentication fails.
+If an active secret is nearing expiry, a warning banner appears on the application in the Console. Rotate the secret before authentication fails.
 
 #### Revoke all client secrets
 
-To force an immediate rotation, for example if a secret is compromised, go to the **Danger Zone** of the **Protocol** tab and click **Revoke All** under **Revoke all & generate a new client secret**.
+To force an immediate rotation, for example if a secret is compromised, go to the **Danger Zone** of the **Protocol** tab. Click **Revoke All** under **Revoke all & generate a new client secret**.
 
 ![Revoke all client secrets]({{base_path}}/assets/img/guides/applications/client-secrets-danger-zone.png){: width="600" style="display: block; margin: 0; border: 0.3px solid lightgrey;"}
 
